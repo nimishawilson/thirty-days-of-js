@@ -1,0 +1,46 @@
+<html>
+<head>
+
+</head>
+
+<body>
+    <!-- <div class="keys">
+        <div data-key="65" class="key"> 
+            <kbd> A </kbd>
+            <span class="sound">clap</span>
+        </div>
+        <div data-key="83" class="key"> 
+                <kbd> S </kbd>
+                <span class="sound">clap</span>
+            </div>
+    </div>
+  -->
+    <audio  id="key65" data-key="key65" src="sounds/clap.wav"> </audio>
+    <audio id="key83" data-key="key83" src="sounds/snare.mp3"> </audio>
+    <audio id="key68" data-key="key68" src="sounds/snare2.wav"> </audio>
+
+    <audio  id="key70" data-key="key70" src="sounds/clap.wav"> </audio>
+    <audio id="key71" data-key="key71" src="sounds/snare.mp3"> </audio>
+    <audio id="key72" data-key="key72" src="sounds/snare2.wav"> </audio>
+
+
+    <audio  id="key74" data-key="key74" src="sounds/clap.wav"> </audio>
+    <audio id="key75" data-key="key75" src="sounds/snare.mp3"> </audio>
+    <audio id="key76" data-key="key76" src="sounds/snare2.wav"> </audio>
+
+    <script>
+        window.addEventListener('keydown', function (e) {
+            console.log("keycode"+e.keyCode)
+           
+           const audio = document.querySelector('audio[data-key=key'+e.keyCode+']');
+        // const audio = document.querySelector('#key'+e.keyCode);
+
+           console.log("audio"+audio)
+           if(!audio) return;
+           audio.currentTime=0;
+           audio.play();
+        });
+    </script>
+</body>
+
+</html>
