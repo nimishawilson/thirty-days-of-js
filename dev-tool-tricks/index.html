@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Dev Tool Tricks </title>
+
+</head>
+
+<body>
+  <p onclick="makeGreen()"> make green </p>
+</body>
+
+<script>
+  function makeGreen() {
+    const p = document.querySelector('p');
+    p.style.color = '#BADA55';
+    p.style.fontSize = '50px';
+  }
+
+  //regular 
+  console.log("hello");
+
+  //interpolated
+  const test = 'this is the missing text';
+  console.log(`hello i'm a string  %s abcd`, test)
+
+  //styled
+  console.log('%c this is styled text in console', 'font-size:20px; color:indigo');
+
+  //warning
+  console.warn('this is warning text');
+
+  //error
+  console.error('this is ERRORRRRRRR');
+
+  //info
+  console.info('imp info');
+
+  //test
+  const p = document.querySelector('p');
+  console.assert(p.classList.contains('ouch'), 'that  is wrongs')
+
+  //clear
+  console.clear();
+
+  //viewing DOM elements
+  console.log(p);
+  console.dir(p);
+
+  console.clear();
+
+
+  //grouping  together
+  const dogs = [{ name: 'whoolee', age: '3', color: 'brown' }, { name: 'allasdas', age: '2', color: 'white' }];
+  dogs.forEach(dog => {
+    console.group(`${dog.name}`)
+    console.log(`this is ${dog.name} `)
+    console.log(`his age is ${dog.age}`)
+    console.log(`his color is ${dog.color}`)
+    console.groupEnd(`${dog.name}`)
+  })
+
+
+  //counting
+  console.count('logo')
+  console.count('logo')
+
+  //timing
+  console.time('fetching data');
+  setTimeout(function () {
+    alert("Hello");
+    console.timeEnd('fetching data');
+  }, 2000);
+
+  //table
+  console.table(dogs)
+</script>
+
+</html>
