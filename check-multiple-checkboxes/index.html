@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> check multiple checkboxes </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+  <style>
+    .margintop{
+            margin-top: 50px;
+        }
+        .border_box_for_checkbox{
+            background-color: #48C9B0; border: 1px solid black; border-radius: 15px;  padding: 10px;
+        }
+        body{
+            background-color: #A3E4D7;
+        }
+    </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row margintop">
+      <div class="col-md-4"> </div>
+      <div class="col-md-4">
+        <div class="border_box_for_checkbox">
+          <b style="font-family: cursive;"> Hold shift to check multiple checkboxes </b>
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-1"> <input type="checkbox"> </div>
+            <div class="col-md-5"> <label> one </label> </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-1"> <input type="checkbox"> </div>
+            <div class="col-md-5"> <label> two </label> </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-1"> <input type="checkbox"> </div>
+            <div class="col-md-5"> <label> three </label> </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-1"> <input type="checkbox"> </div>
+            <div class="col-md-5"> <label> four </label> </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-1"> <input type="checkbox"> </div>
+            <div class="col-md-5"> <label> five </label> </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-1"> <input type="checkbox"> </div>
+            <div class="col-md-5"> <label> six </label> </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-1"> <input type="checkbox"> </div>
+            <div class="col-md-5"> <label> seven </label> </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-1"> <input type="checkbox"> </div>
+            <div class="col-md-5"> <label> eight </label> </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4"> </div>
+    </div>
+
+  </div>
+
+
+</body>
+
+<script>
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+  //console.log(checkboxes);
+
+  let lastChecked;
+
+  function handleCheck(e) {
+    //console.log(e);
+    let inBetween = false;
+    if (e.shiftKey && this.checked) {
+      checkboxes.forEach(checkbox => {
+        console.log(checkbox);
+        if (checkbox === this || checkbox === lastChecked) {
+          inBetween = !inBetween;
+          console.log('starting to check inbetween')
+        }
+        if (inBetween) {
+          checkbox.checked = true;
+        }
+      }
+      )
+
+    }
+    lastChecked = this;
+  }
+
+  checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleCheck)
+
+  );
+
+</script>
+
+</html>
