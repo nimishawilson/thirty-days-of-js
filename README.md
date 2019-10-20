@@ -9,8 +9,8 @@ see all projects [ here](https://nimishawilson.github.io/thirty-days-of-js/)
 5) [ ajax-type-ahead](https://nimishawilson.github.io/thirty-days-of-js/ajax-type-ahead/index.html)
 6) [ fun-with-html5-canvas ](https://nimishawilson.github.io/thirty-days-of-js/fun-with-html5-canvas/index.html)
 7) [ check-multiple-checkboxes ](https://nimishawilson.github.io/thirty-days-of-js/check-multiple-checkboxes/index.html)
-8) [ custom-html5-video-palyer ](https://nimishawilson.github.io/thirty-days-of-js/custom-video-player/index.html)
-9) [ key-sequence-detection ](https://nimishawilson.github.io/thirty-days-of-js/key-sequence-detection /index.html)
+8) [ custom-html5-video-palyer](https://nimishawilson.github.io/thirty-days-of-js/custom-video-player/index.html)
+9) [key-sequence-detection](https://nimishawilson.github.io/thirty-days-of-js/key-sequence-detection/index.html)
 
 
 
