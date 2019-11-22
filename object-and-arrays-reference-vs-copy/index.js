@@ -39,3 +39,29 @@ team5[3]='cool';
 console.log(team5);
 console.log(players);
 
+//objects
+const person = {
+    name : 'nimisha',
+    age : 100
+}
+const captain = person;
+captain.number = 99;
+const cap2 = Object.assign({}, person, {number: 99, age:12});
+console.log(captain);
+console.log(cap2);
+
+
+//making copy of an object
+const myDetails = {
+    name : 'nimisha',
+    age : 45,
+    social : {
+        facebook: 'nim@yahoo.in',
+        twitter: '@nimisha'
+    }
+}
+//console.clear();
+console.log(myDetails);
+const copymyDetails = Object.assign({},myDetails); //copying object myDetails to copymyDetails
+copymyDetails.name = 'zzzzzzzzz';
+console.log(copymyDetails);
