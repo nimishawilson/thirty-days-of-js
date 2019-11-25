@@ -12,7 +12,8 @@ see all projects [ here](https://nimishawilson.github.io/thirty-days-of-js/)
 8) [ custom-html5-video-palyer](https://nimishawilson.github.io/thirty-days-of-js/custom-video-player/index.html)
 9) [key-sequence-detection](https://nimishawilson.github.io/thirty-days-of-js/key-sequence-detection/index.html)
 
-10) [local-storage and event-delegation](https://nimishawilson.github.io/thirty-days-of-js/local-storage-event-delegation/index.html)
+10) [local-storage and event-delegation](https://nimishawilson.github.io/thirty-days-of-js/local-storage-event-delegation/index.html)   
+11) [css-text-shadow-mouse-move-effect](https://nimishawilson.github.io/thirty-days-of-js/css-text-shadow-mouse-move-effect/index.html)
 
 
 
