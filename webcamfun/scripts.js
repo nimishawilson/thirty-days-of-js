@@ -8,8 +8,6 @@ function getVideo() {
   navigator.mediaDevices.getUserMedia({ video: true, audio: false })
     .then(localMediaStream => {
       console.log(localMediaStream);
-    
-      
       video.srcObject = localMediaStream;
       video.play();
     })
@@ -26,15 +24,8 @@ function paintToCanvas() {
 
   return setInterval(() => {
     ctx.drawImage(video, 0, 0, width, height);
-    
     let pixels = ctx.getImageData(0, 0, width, height);
-    
-
-    pixels = rgbSplit(pixels);
-    
-
-    
-   
+    pixels = redEffect(pixels);
     ctx.putImageData(pixels, 0, 0);
   }, 16);
 }
@@ -43,7 +34,6 @@ function takePhoto() {
   // played the sound
   snap.currentTime = 0;
   snap.play();
-
   // take the data out of the canvas
   const data = canvas.toDataURL('image/jpeg');
   const link = document.createElement('a');
@@ -73,7 +63,6 @@ function rgbSplit(pixels) {
 
 function greenScreen(pixels) {
   const levels = {};
-
   document.querySelectorAll('.rgb input').forEach((input) => {
     levels[input.name] = input.value;
   });
@@ -94,10 +83,8 @@ function greenScreen(pixels) {
       pixels.data[i + 3] = 0;
     }
   }
-
   return pixels;
 }
 
 getVideo();
-
 video.addEventListener('canplay', paintToCanvas);
