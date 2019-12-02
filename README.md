@@ -12,11 +12,11 @@ see all projects [ here](https://nimishawilson.github.io/thirty-days-of-js/)
 8) [ custom-html5-video-palyer](https://nimishawilson.github.io/thirty-days-of-js/custom-video-player/index.html)
 9) [key-sequence-detection](https://nimishawilson.github.io/thirty-days-of-js/key-sequence-detection/index.html)
 
-10) [local-storage and event-delegation](https://nimishawilson.github.io/thirty-days-of-js/local-storage-event-delegation/index.html)   
+10) [local-storage and event-delegation](https://nimishawilson.github.io/thirty-days-of-js/local-storage-event-delegation/index.html) [WIP]
 11) [css-text-shadow-mouse-move-effect](https://nimishawilson.github.io/thirty-days-of-js/css-text-shadow-mouse-move-effect/index.html)
 12) [sorting-bandname-without-articles](https://nimishawilson.github.io/thirty-days-of-js/sorting-bandname-without-articles/index.html)
 13) [tally-string-time-with-reduce](https://nimishawilson.github.io/thirty-days-of-js/tally-string-time-with-reduce/index.html)
-14) [web cam fun](https://nimishawilson.github.io/thirty-days-of-js/webcamfun/index.html)
+14) [web cam fun](https://nimishawilson.github.io/thirty-days-of-js/webcamfun/index.html) [WIP]
 
 
 
