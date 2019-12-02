@@ -18,6 +18,7 @@ see all projects [ here](https://nimishawilson.github.io/thirty-days-of-js/)
 13) [tally-string-time-with-reduce](https://nimishawilson.github.io/thirty-days-of-js/tally-string-time-with-reduce/index.html)
 14) [web cam fun](https://nimishawilson.github.io/thirty-days-of-js/webcamfun/index.html) [WIP]
 15) [Native speech recognition](https://nimishawilson.github.io/thirty-days-of-js/speech-recognition/index.html) [WIP]
+16) [geolocation based speedometer and compass](https://nimishawilson.github.io/thirty-days-of-js/speedometer-and-compass/index.html) [WIP]
 
 
 
