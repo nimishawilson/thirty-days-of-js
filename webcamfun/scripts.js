@@ -30,6 +30,35 @@ function paintToCanvas() {
   }, 16);
 }
 
+function paintToCanvasrgbSplit() {
+  const width = video.videoWidth;
+  const height = video.videoHeight;
+  canvas.width = width;
+  canvas.height = height;
+
+  return setInterval(() => {
+    ctx.drawImage(video, 0, 0, width, height);
+    let pixels = ctx.getImageData(0, 0, width, height);
+    pixels = rgbSplit(pixels);
+    ctx.putImageData(pixels, 0, 0);
+  }, 16);
+}
+function paintToCanvasgreenScreen() {
+  const width = video.videoWidth;
+  const height = video.videoHeight;
+  canvas.width = width;
+  canvas.height = height;
+
+  return setInterval(() => {
+    ctx.drawImage(video, 0, 0, width, height);
+    let pixels = ctx.getImageData(0, 0, width, height);
+    pixels = greenScreen(pixels);
+    ctx.putImageData(pixels, 0, 0);
+  }, 16);
+}
+
+
+
 function takePhoto() {
   // played the sound
   snap.currentTime = 0;
@@ -86,5 +115,19 @@ function greenScreen(pixels) {
   return pixels;
 }
 
-getVideo();
-video.addEventListener('canplay', paintToCanvas);
+// getVideo();
+// video.addEventListener('canplay', paintToCanvas);
+
+function changeEffect(e){
+  //console.log("value of e"+e);
+  if(e==1){
+  getVideo();
+  video.addEventListener('canplay', paintToCanvasrgbSplit);
+  } else  if(e==2){
+    getVideo();
+    video.addEventListener('canplay', paintToCanvas);
+  } else  if(e==3){
+    getVideo();
+    video.addEventListener('canplay', paintToCanvasgreenScreen);
+  }
+}
