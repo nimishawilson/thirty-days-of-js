@@ -21,7 +21,9 @@ see all projects [ here](https://nimishawilson.github.io/thirty-days-of-js/)
 16) [geolocation based speedometer and compass](https://nimishawilson.github.io/thirty-days-of-js/speedometer-and-compass/index.html) [WIP]
 17) [follow-along-link-highlighter](https://nimishawilson.github.io/thirty-days-of-js/follow-along-link-highlighter/index.html) 
 18) [speech-synthesis](https://nimishawilson.github.io/thirty-days-of-js/speech-synthesis/index.html) 
-19) [sticky-nav](https://nimishawilson.github.io/thirty-days-of-js/sticky-nav/index.html) [WIP]
+19) [sticky-nav](https://nimishawilson.github.io/thirty-days-of-js/sticky-nav/index.html) 
+20) [event-capture, propagation, bubbling and once](https://nimishawilson.github.io/thirty-days-of-js/event-capture-bubbling/index.html) [WIP]
+
 
 
 
