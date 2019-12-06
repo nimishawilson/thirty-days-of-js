@@ -25,6 +25,8 @@ see all projects [ here](https://nimishawilson.github.io/thirty-days-of-js/)
 20) [event-capture, propagation, bubbling and once](https://nimishawilson.github.io/thirty-days-of-js/event-capture-bubbling/index.html) 
 21) [follow-along-nav](https://nimishawilson.github.io/thirty-days-of-js/follow-along-nav/index.html) 
 22) [click-and-drag-to-scroll](https://nimishawilson.github.io/thirty-days-of-js/click-and-drag-to-scroll/index.html) [WIP]
+23) [Video Speed Controller UI](https://nimishawilson.github.io/thirty-days-of-js/video-speed-controller-ui/index.html) [WIP]
+
 
 
 
