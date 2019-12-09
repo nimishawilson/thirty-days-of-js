@@ -4,79 +4,77 @@
 <head>
   <title> local storage and event delegation </title>
   <style>
-    
+
   </style>
 </head>
 
 
 <body>
 
-<div class="wrapper">
-<h2> local tapas </h2>
-<p> </p>
-<ul class="plates">
-<li> loading tapas... </li>
-</ul>
+  <div class="wrapper">
+    <h2> local tapas </h2>
+    <p> </p>
+    <ul class="plates">
+      <li> loading tapas... </li>
+    </ul>
 
 
-<form class="add-items">
-<input type="text" name="item" placeholder="Item Name" required>
-<input type="submit" value="+ Add item">
-</form>
+    <form class="add-items">
+      <input type="text" name="item" placeholder="Item Name" required>
+      <input type="submit" value="+ Add item">
+    </form>
+  </div>
 
 
-</div>
+  <script>
+    const addItems = document.querySelector('.add-items');
+    const itemsList = document.querySelector('.plates');
+    const items = JSON.parse(localStorage.getItem('items')) || [];
 
+    function addItems(e) {
+      e.preventDefault();
+      const text = (this.querySelector('[name=item]')).value;
+      const item = {
+        text: text,
+        done: false
 
-<script>
-const addItems = document.querySelector('.add-items');
-const itemsList = document.querySelector('.plates');
-const items = JSON.parse(localStorage.getItem('items')) || [];
+      };
+      items.push(item);
+      populateList(items, itemsList);
+      localStorage.setItem('items', JSON.stringify(items));
 
-function addItems(e){
-e.preventDefault();
-const text =  (this.querySelector('[name=item]')).value;
-const item = {
-    text: text,
-    done: false
+      this.reset();
+    }
 
-};
-items.push(item);
-populateList(items,itemsList);
-localStorage.setItem('items',JSON.stringify(items));
-
-this.reset();
-}
-
-function populateList(plates = [], platesList){
-platesList.innereHTML = plates.map((plate,i) => {
-return `
+    function populateList(plates = [], platesList) {
+      platesList.innereHTML = plates.map((plate, i) => {
+        return `
 <li>
 <input type="checkbox" data-index=${i} id="item${i}" ${plate.done ? 'checked' : ''} />
 <label for="item${i}"> ${plate.text}
 </label>
 </li>
 `;
-}).join(''); 
-}
+      }).join('');
+    }
 
-function toggleDone(e){
-if(!e.target.matches(input)) return;
-const el = e.target;
-const index = el.dataset.index;
-items[index].done = !items[index].done;
-localStorage.setItem('items',JSON.stringify(items));
-populateList(items,itemsList);
-}
+    function toggleDone(e) {
+      if (!e.target.matches(input)) return;
+      const el = e.target;
+      const index = el.dataset.index;
+      items[index].done = !items[index].done;
+      localStorage.setItem('items', JSON.stringify(items));
+      populateList(items, itemsList);
+    }
 
-addItems.addEventListener('submit',addItem);
-itemsList.addEventListener('click',toggleDone);
-populateList(items,itemsList);
+    addItems.addEventListener('submit', addItem);
+    itemsList.addEventListener('click', toggleDone);
+    populateList(items, itemsList);
 
 // const checkBoxes = document.querySelectorAll('input');
 // checkBoxes.forEach(input =>  input.addEventListner('click', () => alert('hiii')))
 // populateList(items,itemsList);
-</script>
+  </script>
 
 
 </body>

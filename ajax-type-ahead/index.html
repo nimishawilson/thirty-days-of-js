@@ -5,10 +5,9 @@
   <title> ajax type ahead </title>
 
   <style>
-    .heighlight{
-       background-color: aqua;
-   }
-   
+    .heighlight {
+      background-color: aqua;
+    }
   </style>
 </head>
 
@@ -16,11 +15,11 @@
 <body>
 
   <p>
-	<span class="input">
-		<input type="text" placeholder="Gradient border focus fun">
-		<span></span>	
-	</span>
-</p>
+    <span class="input">
+      <input type="text" placeholder="Gradient border focus fun">
+      <span></span>
+    </span>
+  </p>
 
 
   <input type="text" class="search">
@@ -40,7 +39,7 @@
     //     "state": "New York"
     //  }, ... { ... }
     // ]
-    
+
     fetch(endpoint)
       .then(blob => blob.json())
       .then(data => cities.push(...data))

@@ -149,10 +149,12 @@
 
   <script>
     const panels = document.querySelectorAll('.panel');
+
     function toggleOpen() {
       console.log('hello');
       this.classList.toggle('open');
     }
+
     function toggleActive(e) {
       console.log('hello2');
       console.log(e.propertyName);
@@ -160,6 +162,7 @@
         this.classList.toggle('open-active');
       }
     }
+
     panels.forEach(panel => panel.addEventListener('click', toggleOpen));
     panels.forEach(panel => panel.addEventListener('transitioned', toggleActive));
   </script>

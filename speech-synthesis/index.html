@@ -47,17 +47,19 @@
         .map(voice => `<option value="${voice.name}"> ${voice.name} (${voice.lang}) </option>`)
         .join('');
     }
+
     function setVoice() {
-      //console.log(this.value)
       msg.voice = voices.find(voice => voice.name === this.value);
       toggle();
     }
+
     function toggle(startOver = true) {
       speechSynthesis.cancel();
       if (startOver) {
         speechSynthesis.speak(msg);
       }
     }
+
     function setOption() {
       console.log(this.name, this.value);
       msg[this.name] = this.value;

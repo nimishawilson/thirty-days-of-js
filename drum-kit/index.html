@@ -6,7 +6,7 @@
 </head>
 
 <body style="background-image:url(images/background.jpg)">
-  <h1  class="heading"> Drum kit</h1>
+  <h1 class="heading"> Drum kit</h1>
   <div class="keys">
     <div data-key="key65" class="key">
       <kbd> A </kbd>
@@ -58,7 +58,7 @@
   <audio id="key76" data-key="key76" src="sounds/snare2.wav"> </audio>
 
   <script>
-   
+
     function playSound(e) {
 
       const audio = document.querySelector('audio[data-key=key' + e.keyCode + ']');
@@ -74,6 +74,7 @@
       if (e.propertyName !== 'transform') return;
       e.target.classList.remove('playing');
     }
+
     const keys = document.querySelectorAll('.keys');
     keys.forEach(key => key.addEventListener('transitionend', removeTransition));
     window.addEventListener('keydown', playSound);
