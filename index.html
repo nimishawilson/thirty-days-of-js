@@ -1,44 +1,157 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title> 30 days of javascript </title>
-  <style>
-    .heading {
-      text-align: center;
-      color: black;
-      text-shadow: 2px 2px gray;
-      font-size: 56px;
-    }
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title> JavaScript 30 </title>
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    .links {
-      color: red;
-    }
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+  font-family: Arial;
+}
+.important{
+  color: rgb(102, 45, 45);
+  text-decoration: none;
+  font-style: italic;
+}
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
 
-    .links:hover {
-      color: green;
-    }
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
 
-    .point {
-      font-size: 28px;
-    }
-  </style>
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+  color: black;
+  
+}
+
+.content:hover {
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+</style>
 </head>
-
 <body>
-  <h1 class="heading"> 30 days of javascript </h1>
-  <ul>
-    <li class="point"> Day-1: <a class="links" href="drum-kit/index.html"> drum kit </a> </li>
-    <li class="point"> Day-2: <a class="links" href="css-js-clock/index.html"> js clock </a> </li>
-    <li class="point"> Day-3: <a class="links" href="css-variables-and-js/index.html"> update css variables with js </a> </li>
-    <li class="point"> Day-5: <a class="links" href="flex-panels-image-gallery/index.html"> flex-panels-image-gallery </a> </li>
-    <li class="point"> Day-6: <a class="links" href="ajax-type-ahead/index.html"> ajax-type-ahead </a> </li>
-    <li class="point"> Day-8: <a class="links" href="fun-with-html5-canvas/index.html"> fun-with-html5-canvas </a> </li>
-    <li class="point"> Day-10: <a class="links" href="check-multiple-checkboxes/index.html"> check-multiple-checkboxes </a> </li>
 
-    
-    
+<!-- MAIN (Center website) -->
+<div class="main">
 
-  </ul>
+<h1>JavaScript 30</h1>
+<hr>
+
+<h2> This is a JavaScript practice with <a class="important" href="https://javascript30.com/"> JavaScript30 </a> by <a class="important" href="https://github.com/wesbos"> Wes Bos </a> without any frameworks or libraries, and with ES6 syntax.
+</h2>
+<p> Developed by <a href="https://nimishawilson.github.io/portfolio/" class="important"> Nimisha Wilson </a>. view code on <a href="https://github.com/nimishawilson/thirty-days-of-js" class="important"> github</a>  </p>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <a href="https://nimishawilson.github.io/thirty-days-of-js/drum-kit/index.html"> 
+  <div class="column">
+    <div class="content">
+      <img src="images/1_drumkit.png" alt="drumkit" style="width:100%">
+      <h3>01. JS drumkit </h3>
+    </div>
+  </div>
+</a>
+<a href="https://nimishawilson.github.io/thirty-days-of-js/css-js-clock/index.html">
+  <div class="column">
+    <div class="content">
+    <img src="images/2_clock.png" alt="js clock" style="width:100%">
+      <h3>02. CSS + JS clock</h3>
+    </div>
+  </div>
+</a>
+<a href="https://nimishawilson.github.io/thirty-days-of-js/css-variables-and-js/index.html"> 
+  <div class="column">
+    <div class="content">
+    <img src="images/3_cssvariables.png" alt="css variables" style="width:100%">
+      <h3> 03. css variables and JS </h3>
+    </div>
+  </div>
+</a>
+<a href="https://nimishawilson.github.io/thirty-days-of-js/flex-panels-image-gallery/index.html"> 
+  <div class="column">
+    <div class="content">
+    <img src="images/5_flexpanels.png" alt="flex panels" style="width:100%">
+      <h3>05. Flex Panels Image Gallery</h3>
+    </div>
+  </div>
+</a>
+<!-- END GRID -->
+</div>
+
+<!-- <div class="content">
+  <img src="https://www.w3schools.com/w3images/p3.jpg" alt="Bear" style="width:100%">
+  <h3>Some Other Work</h3>
+  <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+  <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+</div> -->
+
+<!-- END MAIN -->
+</div>
+
 </body>
-
 </html>
