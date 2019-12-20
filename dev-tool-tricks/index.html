@@ -3,16 +3,23 @@
 
 <head>
   <title> Dev Tool Tricks </title>
+<style>
+  body{
+    background-color:  #ff6f69;
+  }
+</style>
 
 </head>
 
 <body>
-  <p onclick="makeGreen()"> make green </p>
+  <p class="select" onclick="makeGreen()"> Click on text to change text color to green </p>
+
+  <p> Open console <p>
 </body>
 
 <script>
   function makeGreen() {
-    const p = document.querySelector('p');
+    const p = document.querySelector('.select');
     p.style.color = '#BADA55';
     p.style.fontSize = '50px';
   }
