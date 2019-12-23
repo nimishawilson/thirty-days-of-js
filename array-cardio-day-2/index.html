@@ -3,10 +3,15 @@
 
 <head>
   <title> Array Cardio Day-2 </title>
-
+<style>
+  body{
+   background-color: crimson;
+  }
+</style>
 </head>
 
 <body>
+  <h1> Array Cardio Day-2 </h1>
   <script>
     const people = [
       { name: 'wes', year: 1998 },
@@ -60,6 +65,7 @@
       ...comments.slice(0, index),
       ...comments.slice(index + 1)
     ];
+    console.log('----------')
     console.table(newComments);
   </script>
 </body>
